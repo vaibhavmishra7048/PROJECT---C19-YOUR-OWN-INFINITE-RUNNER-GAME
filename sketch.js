@@ -7,11 +7,10 @@ var girl,girl_running,girl_collided,girlImage,zombie,zombie_running,zombie_attac
 var obstaclesGroup,obstacle1,obstacle2,obstacle3,obstacle4;
 var jumpSound,dieSound,checkpointSound;
 var score;
-var gameOver,restart,gameOverImage,restartImage,runound,backgroundImage,moneyImage,runSound,nosound;
+var gameOver,restart,gameOverImage,restartImage,runound,runSound,nosound;
 
 function preload(){
-ground_image=loadImage("Background.png");
-backgroundImage=loadImage("background.png");
+  ground_image=loadImage("Background.png");
   girl_running=loadAnimation("Run (1).png","Run (2).png","Run (3).png","Run (4).png","Run (5).png","Run (6).png","Run (7).png","Run (8).png","Run (9).png","Run (10).png","Run (11).png","Run (12).png","Run (14).png","Run (15).png","Run (16).png","Run (17).png","Run (18).png","Run (19).png","Run (20).png");
   zombie_running=loadAnimation("Walk (1).png","Walk (2).png","Walk (3).png","Walk (4).png","Walk (5).png","Walk (6).png","Walk (7).png","Walk (8).png","Walk (9).png","Walk (10).png");
   zombie_attack=loadAnimation("Attack (2).png","Attack (3).png","Attack (4).png","Attack (5).png","Attack (6).png","Attack (7).png","Attack (8).png");
@@ -32,10 +31,10 @@ function setup() {
  createCanvas(600,500);
 
   runSound.loop();
-ground=createSprite(0,0,0,0);
-  ground.shapeColor="white";
-ground.addImage("ground_image",ground_image||"backgroundImage.png",backgroundImage);
-ground.scale=1.4;
+    ground=createSprite(0,0,0,0);
+   ground.shapeColor="white";
+    ground.addImage("ground_image",ground_image);
+    ground.scale=1.4;
    ground.velocityX=-1
   
    girl=createSprite(300,420,600,10);
